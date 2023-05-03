@@ -13,5 +13,12 @@ document.querySelectorAll('.balloon').forEach( b => b.addEventListener('mouseove
 
      // 1. cada vez que petamos un globo, decrementar la variable de estado
 
+     totalBalloons--;
+
     // 2. cuando la variable de estado ha llegado 0, tenemos que mostrar el mensaje de felicitación y esconder todos los balones
-}))
+
+    if (totalBalloons === 0) {
+        document.querySelector('#balloon-gallery').style.display = 'none';
+        document.querySelector('#yay-no-balloons').style.display = 'block';
+    };
+}));
